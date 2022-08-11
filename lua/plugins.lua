@@ -28,7 +28,7 @@ packer.startup(function(use)
   use 'neovim/nvim-lspconfig' -- LSP did't work
   use { 'neoclide/coc.nvim', branch = 'release' } -- GodBless cocnvim. Thx rsh_12
 
-  use { -- Treesitter did't work 08/11/22
+  use { -- Treesitte
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
@@ -47,4 +47,16 @@ packer.startup(function(use)
 
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
+
+  use {
+  "folke/todo-comments.nvim",
+  requires = "nvim-lua/plenary.nvim",
+  config = function()
+    require("todo-comments").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end -- TODO comments
+}
 end)
