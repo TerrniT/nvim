@@ -17,7 +17,10 @@ packer.startup(function(use)
   use 'glepnir/lspsaga.nvim' -- LSP UI's cool but did't work 08/11/22 03:56 AM
   use 'L3MON4D3/LuaSnip' -- Snippet
   use 'hoob3rt/lualine.nvim' -- Statusline
-  use { "williamboman/mason.nvim" } -- Mason lsp installer
+ 
+  use 'williamboman/mason.nvim'-- Mason lsp installer
+  use 'williamboman/mason-lspconfig.nvim'
+
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for nvim
@@ -43,4 +46,5 @@ packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua' -- Colorized hex colors #333333
 
   use 'lewis6991/gitsigns.nvim'
+  use 'dinhhuy258/git.nvim' -- For git blame & browse
 end)
