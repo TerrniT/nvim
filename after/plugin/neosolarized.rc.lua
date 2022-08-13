@@ -1,7 +1,7 @@
 local status, n = pcall(require, 'neosolarized')
 if (not status) then return end
 
-n.setup({comment_italics = true })
+n.setup({ comment_italics = true })
 
 
 local colorbuddy = require('colorbuddy.init')
@@ -13,7 +13,7 @@ local styles = colorbuddy.styles
 
 Color.new('black', '#000000')
 Group.new('CursorLine', colors.none, colors.base03, styles.NONE, colors.base1)
-Group.new('CursorLineNr', colors.white, colors.black, styles.NONE, colors.base1)
+Group.new('CursorLineNr', colors.orange, colors.black, styles.NONE, colors.base1)
 Group.new('Visual', colors.none, colors.base03, styles.reverse)
 
 local cError = groups.Error.fg

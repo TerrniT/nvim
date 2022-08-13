@@ -28,7 +28,7 @@ packer.startup(function(use)
   use 'neovim/nvim-lspconfig' -- LSP did't work
   use { 'neoclide/coc.nvim', branch = 'release' } -- GodBless cocnvim. Thx rsh_12
 
-  use { -- Treesitte
+  use { -- Treesitter
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
