@@ -17,8 +17,10 @@ packer.startup(function(use)
   use 'glepnir/lspsaga.nvim' -- LSP UI's cool but did't work 08/11/22 03:56 AM
   use 'L3MON4D3/LuaSnip' -- Snippet
   use 'hoob3rt/lualine.nvim' -- Statusline
- 
-  use 'williamboman/mason.nvim'-- Mason lsp installer
+  use { 'dsznajder/vscode-es7-javascript-react-snippets', -- ES7 snippets for React, JS, React Native
+    run = 'yarn install --frozen-lockfile && yarn compile'
+  }
+  use 'williamboman/mason.nvim' -- Mason lsp installer
   use 'williamboman/mason-lspconfig.nvim'
 
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
@@ -49,14 +51,14 @@ packer.startup(function(use)
   use 'dinhhuy258/git.nvim' -- For git blame & browse
 
   use {
-  "folke/todo-comments.nvim",
-  requires = "nvim-lua/plenary.nvim",
-  config = function()
-    require("todo-comments").setup {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  end -- TODO comments
-}
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end -- TODO comments
+  }
 end)
