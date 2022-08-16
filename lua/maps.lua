@@ -35,4 +35,11 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 -- Escape from terminal mode
 keymap.set('t', '<ESC>', '<C-|><C-n>')
 
+-- Fast way to escape from files in vim
+keymap.set('', ';wq', ':wq<Return>', { silent = true })
 
+-- Fast way to save
+keymap.set('', ';w', ':w<Return>', { silent = true })
+
+-- Fast way to quit
+keymap.set('', ';q', ':q<Return>', { silent = true })
