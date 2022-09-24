@@ -28,7 +28,6 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for nvim
   use 'hrsh7th/nvim-cmp' -- Completion
   use 'neovim/nvim-lspconfig' -- LSP did't work
-  use { 'neoclide/coc.nvim', branch = 'release' } -- GodBless cocnvim. Thx rsh_12
 
   use { -- Treesitter
     'nvim-treesitter/nvim-treesitter',
